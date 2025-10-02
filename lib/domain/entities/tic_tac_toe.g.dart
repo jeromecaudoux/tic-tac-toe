@@ -16,10 +16,10 @@ TicTacToe _$TicTacToeFromJson(Map<String, dynamic> json) => TicTacToe(
 
 Map<String, dynamic> _$TicTacToeToJson(TicTacToe instance) => <String, dynamic>{
   'id': instance.gameId,
-  'board': instance.board,
+  'board': instance.board.toJson(),
   'player': _$PlayerEnumMap[instance.player]!,
-  'createdAt': dateTimeToJson(instance.createdAt),
-  'updatedAt': dateTimeToJson(instance.updatedAt),
+  if (dateTimeToJson(instance.createdAt) case final value?) 'createdAt': value,
+  if (dateTimeToJson(instance.updatedAt) case final value?) 'updatedAt': value,
 };
 
 const _$PlayerEnumMap = {Player.X: 'X', Player.O: 'O', Player.none: 'none'};

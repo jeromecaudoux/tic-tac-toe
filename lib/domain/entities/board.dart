@@ -19,14 +19,20 @@ class Board extends Equatable {
         (_) => List.generate(size, (_) => Player.none),
       );
 
-  factory Board.fromJson(dynamic json) => _$BoardFromJson(json);
+  int get size => data.length;
 
-  Map<String, dynamic> toJson() => _$BoardToJson(this);
+  Player at(int x, int y) => data[x][y];
 
-  @override
-  List<Object> get props => [data];
+  Board set(int x, int y, Player player) {
+    assert(x >= 0 && x < size, 'x must be within board bounds');
+    assert(y >= 0 && y < size, 'y must be within board bounds');
+    assert(player != Player.none, 'player must be X or O');
+    assert(at(x, y) == Player.none, 'cell is already occupied');
+    data[x][y] = player;
+    return this;
+  }
 
-  Player get findWinner {
+  Player? get winner {
     // Check rows
     for (var row in data) {
       if (row.every((cell) => cell == Player.X)) return Player.X;
@@ -56,6 +62,21 @@ class Board extends Equatable {
       return Player.O;
     }
 
-    return Player.none;
+    bool isDraw = data.every((row) => row.every((cell) => cell != Player.none));
+    if (isDraw) return Player.none;
+    return null;
   }
+
+  Board copy() {
+    return Board(
+      data: data.map((row) => List<Player>.from(row)).toList(),
+    );
+  }
+
+  factory Board.fromJson(dynamic json) => _$BoardFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BoardToJson(this);
+
+  @override
+  List<Object> get props => [data];
 }

@@ -5,5 +5,7 @@
   "goHomepage": "Go to homepage",
   "back": "Back",
   "checkInternetConnection": "Check your internet connection",
-  "genericError": "An error occurred, please try again"
+  "genericError": "An error occurred, please try again",
+  "gameOver": "Game Over !",
+  "boardItemAlreadyPlayed": "This item has already been played"
 }

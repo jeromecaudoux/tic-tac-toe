@@ -5,5 +5,7 @@
   "goHomepage": "Aller à la page d'accueil",
   "back": "Retour",
   "checkInternetConnection": "Vérifiez votre connexion Internet",
+  "boardItemAlreadyPlayed": "This item has already been played",
+  "gameOver": "Game Over !",
   "genericError": "Une erreur est survenue, veuillez réessayer"
 }

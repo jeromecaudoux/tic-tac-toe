@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart' hide Action;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tictactoe/data/datasource/cache_service.dart';
 import 'package:tictactoe/domain/entities/action.dart';
@@ -28,9 +29,11 @@ class GamesRepository extends IGamesRepository {
   });
 
   @override
-  Future<void> onAction(Action action) {
-    // TODO: implement onAction
-    throw UnimplementedError();
+  Future<void> onAction(String gameId, Action action) async {
+    gamesContainer.update(gamesContainer.get(gameId).play(action));
+    debugPrint(
+      'Game updated: $gameId. Player ${action.player} played at (${action.x}, ${action.y})',
+    );
   }
 
   @override
@@ -40,7 +43,9 @@ class GamesRepository extends IGamesRepository {
       boardSize: appConfig.boardSize,
     );
     gamesContainer.add(game);
-    // todo save to cache
+    debugPrint(
+      'New game created: ${game.gameId} with board size ${appConfig.boardSize}',
+    );
     return game;
   }
 }

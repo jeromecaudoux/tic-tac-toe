@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:body_builder/body_builder.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart' hide Threshold;
 import 'package:flutter_riverpod/flutter_riverpod.dart' hide StateProvider;
@@ -27,7 +26,6 @@ class AppRepository extends IAppRepository {
   Future<bool> init() async {
     try {
       bool vb = appConfig.verbose == true;
-      BodyBuilder.setDefaultConfig(debugLogsEnabled: false);
       await Future.wait([
         SystemChrome.setPreferredOrientations([
           DeviceOrientation.portraitUp,

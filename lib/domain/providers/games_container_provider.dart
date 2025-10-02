@@ -10,7 +10,7 @@ final gamesContainerProvider =
 class GamesContainerNotifier extends StateNotifier<GamesContainer> {
   GamesContainerNotifier() : super(GamesContainer());
 
-  TicTacToe? get(String id) => state.get(id);
+  TicTacToe get(String id) => state.get(id);
 
   void add(TicTacToe game) => state = (state..add(game)).copy();
 

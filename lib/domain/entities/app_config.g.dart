@@ -12,6 +12,6 @@ AppConfig _$AppConfigFromJson(Map<String, dynamic> json) => AppConfig(
 );
 
 Map<String, dynamic> _$AppConfigToJson(AppConfig instance) => <String, dynamic>{
-  'verbose': instance.verbose,
+  if (instance.verbose case final value?) 'verbose': value,
   'boardSize': instance.boardSize,
 };
