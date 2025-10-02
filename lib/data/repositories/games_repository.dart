@@ -31,6 +31,7 @@ class GamesRepository extends IGamesRepository {
   @override
   Future<void> onAction(String gameId, Action action) async {
     gamesContainer.update(gamesContainer.get(gameId).play(action));
+    await cacheService.games().set(gamesContainer.allGames);
     debugPrint(
       'Game updated: $gameId. Player ${action.player} played at (${action.x}, ${action.y})',
     );
@@ -43,9 +44,17 @@ class GamesRepository extends IGamesRepository {
       boardSize: appConfig.boardSize,
     );
     gamesContainer.add(game);
+    await cacheService.games().set(gamesContainer.allGames);
     debugPrint(
       'New game created: ${game.gameId} with board size ${appConfig.boardSize}',
     );
     return game;
+  }
+
+  @override
+  Future<void> delete(String gameId) async {
+    gamesContainer.remove(gameId);
+    await cacheService.games().set(gamesContainer.allGames);
+    debugPrint('Game deleted: $gameId');
   }
 }

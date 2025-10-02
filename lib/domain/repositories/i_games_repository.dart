@@ -5,4 +5,6 @@ abstract class IGamesRepository {
   Future<TicTacToe> newGame();
 
   Future<void> onAction(String gameId, Action action);
+
+  Future<void> delete(String gameId);
 }

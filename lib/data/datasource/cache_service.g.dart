@@ -14,13 +14,15 @@ class _CacheService extends CacheService {
   String get name => "cache";
 
   @override
-  CacheEntry<GamesContainer> games() => SimpleCacheEntry(
+  CacheEntry<Iterable<TicTacToe>> games() => SimpleCacheEntry(
     cache: this,
     path: 'games',
     name: null,
     isPersistent: true,
     maxAge: null,
-    fromJson: GamesContainer.fromJson,
+    fromJson: (json) => (json as List)
+        .map((e) => TicTacToe.fromJson(e as Map<String, dynamic>))
+        .toList(),
     toJson: null,
   );
 }

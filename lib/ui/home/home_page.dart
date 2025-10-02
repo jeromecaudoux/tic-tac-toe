@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tictactoe/core/utils/app_toast.dart';
+import 'package:tictactoe/core/utils/dimens.dart';
 import 'package:tictactoe/core/utils/i18n.dart';
 import 'package:tictactoe/core/utils/tools.dart';
 import 'package:tictactoe/data/repositories/games_repository.dart';
@@ -45,21 +46,33 @@ class _HomePageState extends ConsumerState<HomePage> {
   }
 
   Widget _buildGames() {
-    return Consumer(
-      builder: (context, ref, child) {
-        final Iterable<TicTacToe> games = ref.watch(
-          gamesContainerProvider.select((container) => container.allGames),
-        );
-        if (games.isEmpty) {
-          return Center(child: Text(I18n.of(context).noGamesYet));
-        }
-        return ListView.builder(
-          itemCount: games.length,
-          itemBuilder: (context, index) {
-            return GameItem(game: games.elementAt(index));
-          },
-        );
-      },
+    return SafeArea(
+      child: Consumer(
+        builder: (context, ref, child) {
+          final Iterable<TicTacToe> games = ref.watch(
+            gamesContainerProvider.select((container) => container.allGames),
+          );
+          if (games.isEmpty) {
+            return Center(child: Text(I18n.of(context).noGamesYet));
+          }
+          return Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: games.length,
+                  itemBuilder: (context, index) {
+                    return GameItem(game: games.elementAt(index));
+                  },
+                ),
+              ),
+              Text(
+                I18n.of(context).slideToDeleteGame,
+                style: const TextStyle(fontSize: text.small, color: Colors.grey),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }

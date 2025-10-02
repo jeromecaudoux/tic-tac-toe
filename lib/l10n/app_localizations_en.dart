@@ -66,5 +66,17 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get delete => 'Delete';
+
+  @override
+  String get deleteGameTitle => 'Delete Game';
+
+  @override
+  String get deleteGameText => 'Are you sure you want to delete this game?';
+
+  @override
+  String get slideToDeleteGame => 'Slide to delete game';
+
+  @override
   String get boardItemAlreadyPlayed => 'This position has already been played';
 }

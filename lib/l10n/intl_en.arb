@@ -18,5 +18,9 @@
   "appTitle": "Tic Tac Toe Games",
   "noGamesYet": "No games yet",
   "game": "Game #{hash}",
+  "delete": "Delete",
+  "deleteGameTitle": "Delete Game",
+  "deleteGameText": "Are you sure you want to delete this game?",
+  "slideToDeleteGame": "Slide to delete game",
   "boardItemAlreadyPlayed": "This position has already been played"
 }

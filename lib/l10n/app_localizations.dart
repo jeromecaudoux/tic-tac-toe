@@ -206,6 +206,30 @@ abstract class AppLocalizations {
   /// **'Game #{hash}'**
   String game(Object hash);
 
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @deleteGameTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Game'**
+  String get deleteGameTitle;
+
+  /// No description provided for @deleteGameText.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this game?'**
+  String get deleteGameText;
+
+  /// No description provided for @slideToDeleteGame.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to delete game'**
+  String get slideToDeleteGame;
+
   /// No description provided for @boardItemAlreadyPlayed.
   ///
   /// In en, this message translates to:
