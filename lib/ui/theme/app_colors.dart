@@ -29,10 +29,6 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color separator;
   final Brightness brightness;
 
-  static AppColors of(BuildContext context) {
-    return Theme.of(context).extension<AppColors>()!;
-  }
-
   const AppColors.light({
     this.textColor = const Color(0xFF262A34),
     this.dark = const Color(0xFFF2F2F2),

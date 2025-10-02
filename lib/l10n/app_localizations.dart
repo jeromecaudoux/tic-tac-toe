@@ -140,10 +140,76 @@ abstract class AppLocalizations {
   /// **'Game Over !'**
   String get gameOver;
 
+  /// No description provided for @playerTurn.
+  ///
+  /// In en, this message translates to:
+  /// **'Player turn'**
+  String get playerTurn;
+
+  /// No description provided for @exitGame.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit Game'**
+  String get exitGame;
+
+  /// No description provided for @exitGameText.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to exit the game? Game is not over yet.'**
+  String get exitGameText;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @exit.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit'**
+  String get exit;
+
+  /// No description provided for @itsDraw.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s a Draw!'**
+  String get itsDraw;
+
+  /// No description provided for @player.
+  ///
+  /// In en, this message translates to:
+  /// **'Player'**
+  String get player;
+
+  /// No description provided for @won.
+  ///
+  /// In en, this message translates to:
+  /// **'won !'**
+  String get won;
+
+  /// No description provided for @appTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tic Tac Toe Games'**
+  String get appTitle;
+
+  /// No description provided for @noGamesYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No games yet'**
+  String get noGamesYet;
+
+  /// No description provided for @game.
+  ///
+  /// In en, this message translates to:
+  /// **'Game #{hash}'**
+  String game(Object hash);
+
   /// No description provided for @boardItemAlreadyPlayed.
   ///
   /// In en, this message translates to:
-  /// **'This item has already been played'**
+  /// **'This position has already been played'**
   String get boardItemAlreadyPlayed;
 }
 

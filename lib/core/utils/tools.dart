@@ -18,6 +18,21 @@ String getMessage(BuildContext context, Object? e) {
   return I18n.of(context).genericError;
 }
 
+extension WidgetListExtension<T> on Iterable<T> {
+  List<T> joinSeparator(T separator, {bool bottom = false}) {
+    Iterator<T> iterator = this.iterator;
+    if (!iterator.moveNext()) return [];
+    List<T> output = [];
+    output.add(iterator.current);
+    while (iterator.moveNext()) {
+      output.add(separator);
+      output.add(iterator.current);
+    }
+    if (bottom) output.add(separator);
+    return output;
+  }
+}
+
 dynamic dateTimeToJson(DateTime? dateTime) {
   if (dateTime == null) {
     return null;

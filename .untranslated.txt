@@ -1,1 +1,15 @@
-{}
+{
+  "fr": [
+    "playerTurn",
+    "exitGame",
+    "exitGameText",
+    "cancel",
+    "exit",
+    "itsDraw",
+    "player",
+    "won",
+    "appTitle",
+    "noGamesYet",
+    "game"
+  ]
+}

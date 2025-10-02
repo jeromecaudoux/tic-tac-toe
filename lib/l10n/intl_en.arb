@@ -7,5 +7,16 @@
   "checkInternetConnection": "Check your internet connection",
   "genericError": "An error occurred, please try again",
   "gameOver": "Game Over !",
-  "boardItemAlreadyPlayed": "This item has already been played"
+  "playerTurn": "Player turn",
+  "exitGame": "Exit Game",
+  "exitGameText": "Are you sure you want to exit the game? Game is not over yet.",
+  "cancel": "Cancel",
+  "exit": "Exit",
+  "itsDraw": "It's a Draw!",
+  "player": "Player",
+  "won": "won !",
+  "appTitle": "Tic Tac Toe Games",
+  "noGamesYet": "No games yet",
+  "game": "Game #{hash}",
+  "boardItemAlreadyPlayed": "This position has already been played"
 }

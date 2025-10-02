@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:tictactoe/core/utils/dimens.dart' as dimens;
-import 'package:tictactoe/ui/theme/app_colors.dart';
 
 void showAppToast(String message) {
   if (message.isEmpty) {
     return;
   }
   showToastWidget(
-    Material(
-      color: Colors.transparent,
-      child: Padding(
-        padding: const EdgeInsets.only(
-          left: dimens.space.normal,
-          right: dimens.space.normal,
-        ),
-        child: MzToast(
-          child: Builder(
-            builder: (context) {
-              return Text(message, textAlign: TextAlign.center);
-            },
+    SafeArea(
+      child: Material(
+        color: Colors.transparent,
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: dimens.space.normal,
+            right: dimens.space.normal,
+          ),
+          child: MzToast(
+            child: Builder(
+              builder: (context) {
+                return Text(message, textAlign: TextAlign.center);
+              },
+            ),
           ),
         ),
       ),
@@ -44,7 +45,6 @@ class MzToast extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) {
         return DecoratedBox(
           decoration: BoxDecoration(
-            color: AppColors.of(context).darker,
             borderRadius: const BorderRadius.all(Radius.circular(25)),
           ),
           child: GestureDetector(

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:tictactoe/core/utils/tools.dart';
@@ -51,9 +49,8 @@ class TicTacToe extends Equatable {
       case Player.X:
         return Player.O;
       case Player.O:
-        return Player.X;
       case Player.none:
-        return Player.values[Random().nextInt(2)];
+        return Player.X;
     }
   }
 

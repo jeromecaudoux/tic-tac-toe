@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
-import 'package:tictactoe/core/router/router.dart';
 import 'package:tictactoe/core/utils/app_toast.dart';
+import 'package:tictactoe/core/utils/i18n.dart';
 import 'package:tictactoe/core/utils/tools.dart';
 import 'package:tictactoe/data/repositories/games_repository.dart';
 import 'package:tictactoe/domain/entities/tic_tac_toe.dart';
 import 'package:tictactoe/domain/providers/games_container_provider.dart';
+import 'package:tictactoe/ui/home/game/game_item.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -20,7 +20,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tic Tac Toe Games'),
+        title: Text(I18n.of(context).appTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
@@ -51,21 +51,12 @@ class _HomePageState extends ConsumerState<HomePage> {
           gamesContainerProvider.select((container) => container.allGames),
         );
         if (games.isEmpty) {
-          return const Center(child: Text('No game found'));
+          return Center(child: Text(I18n.of(context).noGamesYet));
         }
         return ListView.builder(
           itemCount: games.length,
           itemBuilder: (context, index) {
-            final game = games.elementAt(index);
-            return ListTile(
-              title: Text('Game ${game.gameId}'),
-              subtitle: Text('Turn: ${game.player}'),
-              onTap: () {
-                context.push(
-                  Routes.game.build(path: {'id': game.gameId}),
-                );
-              },
-            );
+            return GameItem(game: games.elementAt(index));
           },
         );
       },

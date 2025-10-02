@@ -8,6 +8,10 @@ final cacheServiceProvider = Provider((ref) => _CacheService());
 
 @LocalStoreCache('cache')
 abstract class CacheService with LocalStoreCacheMixIn {
+  Future<void> init() async {
+
+  }
+
   @persistent
   @Cached(path: 'games')
   CacheEntry<GamesContainer> games();

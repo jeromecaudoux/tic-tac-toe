@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide YearPicker;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tictactoe/core/utils/app_toast.dart';
+import 'package:tictactoe/core/utils/dimens.dart';
 import 'package:tictactoe/core/utils/i18n.dart';
 import 'package:tictactoe/domain/entities/player.dart';
 import 'package:tictactoe/domain/entities/tic_tac_toe.dart';
@@ -39,6 +40,7 @@ class _MyBoardItemState extends ConsumerState<BoardItem> {
       onTap: widget.onTap == null ? null : () => _onTap(player, context),
       child: Container(
         color: Colors.grey[300],
+        padding: const EdgeInsets.all(space.half),
         child: CustomPaint(
           painter: PlayerMarkPainter(player: player),
           child: const SizedBox.expand(),
