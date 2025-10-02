@@ -11,7 +11,7 @@ class GamesContainer extends Equatable {
 
   GamesContainer({Map<String, TicTacToe>? games}) : _games = games ?? {};
 
-  TicTacToe? get(String id) => _games[id];
+  TicTacToe get(String id) => _games[id]!;
 
   void add(TicTacToe game) {
     assert(
@@ -38,6 +38,8 @@ class GamesContainer extends Equatable {
 
   @override
   List<Object?> get props => [..._games.values];
+
+  GamesContainer copy() => GamesContainer(games: _games);
 
   factory GamesContainer.fromJson(dynamic json) =>
       _$GamesContainerFromJson(json);

@@ -117,7 +117,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get dailyReminderTitle => 'Rappel quotidien';
 
   @override
-  String get dailyReminderBody => 'Répondez à votre question quotidienne :)';
+  String get dailyReminderBody => 'Répondez à votre game quotidienne :)';
 
   @override
   String get notifications => 'Notifications';
@@ -225,17 +225,17 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get noQuestionForThisDay =>
-      'Oups ! Il n\'y a pas de question pour ce jour.\nNous y travaillons !';
+      'Oups ! Il n\'y a pas de game pour ce jour.\nNous y travaillons !';
 
   @override
-  String get editQuestionTitle => 'Modifier la question';
+  String get editQuestionTitle => 'Modifier la game';
 
   @override
-  String get enterQuestionHint => 'Saisissez votre question ici...';
+  String get enterQuestionHint => 'Saisissez votre game ici...';
 
   @override
   String get noAnswerForThisQuestion =>
-      'Vous n\'avez pas encore répondu à cette question.';
+      'Vous n\'avez pas encore répondu à cette game.';
 
   @override
   String get securityTitle => 'Verrouillage de l\'application';
@@ -251,7 +251,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get notificationsDescription =>
-      'Recevez une notification quotidienne pour répondre à votre question.';
+      'Recevez une notification quotidienne pour répondre à votre game.';
 
   @override
   String get close => 'Fermer';
@@ -264,7 +264,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get aboutTagline =>
-      ' — une question par jour pour réfléchir et garder une trace de votre évolution.';
+      ' — une game par jour pour réfléchir et garder une trace de votre évolution.';
 
   @override
   String get aboutPsychologistName => 'Liria Goularte';

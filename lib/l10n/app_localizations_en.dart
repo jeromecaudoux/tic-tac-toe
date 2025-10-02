@@ -115,7 +115,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dailyReminderTitle => 'Daily Reminder';
 
   @override
-  String get dailyReminderBody => 'Answer your daily question now :)';
+  String get dailyReminderBody => 'Answer your daily game now :)';
 
   @override
   String get notifications => 'Notifications';
@@ -222,17 +222,17 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noQuestionForThisDay =>
-      'Oops! There is no question for this day.\nWe\'re on it!';
+      'Oops! There is no game for this day.\nWe\'re on it!';
 
   @override
-  String get editQuestionTitle => 'Edit question';
+  String get editQuestionTitle => 'Edit game';
 
   @override
-  String get enterQuestionHint => 'Enter your question here...';
+  String get enterQuestionHint => 'Enter your game here...';
 
   @override
   String get noAnswerForThisQuestion =>
-      'You haven\'t answered this question yet.';
+      'You haven\'t answered this game yet.';
 
   @override
   String get securityTitle => 'Lock app on launch';
@@ -248,7 +248,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get notificationsDescription =>
-      'Receive a daily notification to answer your question.';
+      'Receive a daily notification to answer your game.';
 
   @override
   String get close => 'Close';
@@ -261,7 +261,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutTagline =>
-      ' — one question per day to reflect and keep track of your growth.';
+      ' — one game per day to reflect and keep track of your growth.';
 
   @override
   String get aboutPsychologistName => 'Liria Goularte';

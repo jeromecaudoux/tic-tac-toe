@@ -49,4 +49,6 @@ class TicTacToe extends Equatable {
 
   @override
   List<Object> get props => [gameId, updatedAt ?? ''];
+
+  bool get isGameOver => board.findWinner != Player.none;
 }

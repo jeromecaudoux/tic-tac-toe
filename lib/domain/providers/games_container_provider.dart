@@ -12,11 +12,11 @@ class GamesContainerNotifier extends StateNotifier<GamesContainer> {
 
   TicTacToe? get(String id) => state.get(id);
 
-  void add(TicTacToe game) => state = state..add(game);
+  void add(TicTacToe game) => state = (state..add(game)).copy();
 
-  void remove(String id) => state = state..remove(id);
+  void remove(String id) => state = (state..remove(id)).copy();
 
-  void update(TicTacToe game) => state = state..update(game);
+  void update(TicTacToe game) => state = (state..update(game)).copy();
 
   Iterable<TicTacToe> get allGames => state.allGames;
 }

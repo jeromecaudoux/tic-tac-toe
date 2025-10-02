@@ -311,7 +311,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailyReminderBody.
   ///
   /// In en, this message translates to:
-  /// **'Answer your daily question now :)'**
+  /// **'Answer your daily game now :)'**
   String get dailyReminderBody;
 
   /// No description provided for @notifications.
@@ -497,25 +497,25 @@ abstract class AppLocalizations {
   /// No description provided for @noQuestionForThisDay.
   ///
   /// In en, this message translates to:
-  /// **'Oops! There is no question for this day.\nWe\'re on it!'**
+  /// **'Oops! There is no game for this day.\nWe\'re on it!'**
   String get noQuestionForThisDay;
 
   /// No description provided for @editQuestionTitle.
   ///
   /// In en, this message translates to:
-  /// **'Edit question'**
+  /// **'Edit game'**
   String get editQuestionTitle;
 
   /// No description provided for @enterQuestionHint.
   ///
   /// In en, this message translates to:
-  /// **'Enter your question here...'**
+  /// **'Enter your game here...'**
   String get enterQuestionHint;
 
   /// No description provided for @noAnswerForThisQuestion.
   ///
   /// In en, this message translates to:
-  /// **'You haven\'t answered this question yet.'**
+  /// **'You haven\'t answered this game yet.'**
   String get noAnswerForThisQuestion;
 
   /// No description provided for @securityTitle.
@@ -545,7 +545,7 @@ abstract class AppLocalizations {
   /// No description provided for @notificationsDescription.
   ///
   /// In en, this message translates to:
-  /// **'Receive a daily notification to answer your question.'**
+  /// **'Receive a daily notification to answer your game.'**
   String get notificationsDescription;
 
   /// No description provided for @close.
@@ -569,7 +569,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutTagline.
   ///
   /// In en, this message translates to:
-  /// **' — one question per day to reflect and keep track of your growth.'**
+  /// **' — one game per day to reflect and keep track of your growth.'**
   String get aboutTagline;
 
   /// No description provided for @aboutPsychologistName.

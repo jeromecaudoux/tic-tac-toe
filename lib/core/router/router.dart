@@ -7,7 +7,7 @@ import 'package:tictactoe/domain/entities/app_config.dart';
 import 'package:tictactoe/domain/providers/config_providers.dart';
 import 'package:tictactoe/domain/providers/games_container_provider.dart';
 import 'package:tictactoe/ui/home/home_page.dart';
-import 'package:tictactoe/ui/home/question/question_page.dart';
+import 'package:tictactoe/ui/home/game/game_page.dart';
 
 final goRouterProvider = Provider<Routes>((ref) {
   return Routes(
