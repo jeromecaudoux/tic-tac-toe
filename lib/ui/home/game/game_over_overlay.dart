@@ -25,7 +25,7 @@ class GameOverOverlay extends ConsumerWidget {
               if (winner == Player.none)
                 _buildDraw(context)
               else
-                _buildPLayerWin(context, winner),
+                _buildPlayerWin(context, winner),
               const SizedBox(height: space.normal),
               ElevatedButton(
                 onPressed: context.pop,
@@ -49,7 +49,7 @@ class GameOverOverlay extends ConsumerWidget {
     );
   }
 
-  Widget _buildPLayerWin(BuildContext context, Player? winner) {
+  Widget _buildPlayerWin(BuildContext context, Player? winner) {
     return Text.rich(
       TextSpan(
         text: I18n.of(context).player,

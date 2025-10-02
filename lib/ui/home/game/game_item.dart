@@ -54,7 +54,7 @@ class GameItem extends ConsumerWidget {
     Widget subtitle;
     Player? winner = game.board.winner;
     if (winner != null) {
-      subtitle = _buildWInner(context, winner);
+      subtitle = _buildWinner(context, winner);
     } else {
       subtitle = Row(
         children: [
@@ -67,7 +67,7 @@ class GameItem extends ConsumerWidget {
     return subtitle;
   }
 
-  Text _buildWInner(BuildContext context, Player winner) {
+  Text _buildWinner(BuildContext context, Player winner) {
     if (winner == Player.none) {
       return Text(I18n.of(context).itsDraw);
     }
